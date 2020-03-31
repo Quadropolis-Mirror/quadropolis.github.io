@@ -1,0 +1,242 @@
+bind Q "cleargui; showgui quickchat"
+
+alias teamchat 1
+alias baseslider 10
+
+newgui quickchat [
+	if (= $teamchat 0) [
+		guitext		"Here are some important text messages that"
+		guitext		"you can send without wasting much time."
+		guicheckbox	"The server allows teamchat" 		"teamchat"
+			guibar
+		guibutton	"Statements"	"showgui statements0"
+		guibutton	"Requests"	"showgui requests0"
+		guibutton	"Commands"	"showgui commands0"
+		guibutton	"Talk"		"showgui talk0"
+		guibutton	"Global"	"showgui global"
+			guibar
+		guibutton	"Close"		"cleargui"
+		guitext	"Made by Redon 4/21/2008"
+	]
+	if (= $teamchat 1) [
+		guitext		"Here are some important text messages that"
+		guitext		"you can send without wasting much time."
+		guicheckbox	"The server allows teamchat" 		"teamchat"
+			guibar
+		guibutton	"Statements"	"showgui statements1"
+		guibutton	"Requests"	"showgui requests1"
+		guibutton	"Commands"	"showgui commands1"
+		guibutton	"Talk"		"showgui talk1"
+		guibutton	"Global"	"showgui global"
+			guibar
+		guibutton	"Close"		"cleargui"
+		guitext	"Made by Redon 4/21/2008"
+	]
+]
+
+newgui statements0 [
+	guitext 	"Category Statements"
+	guitext		"Teamchat OFF"
+		guibar
+	guibutton 	"Attacking"			"say I'm attacking!"
+	guibutton 	"Defending"			"say I'm defending!"
+	guibutton	"Path Cleared"			"say Path Cleared!"
+		guibar
+	guibutton	"Enemy Weak"			"say The Enemy is weakened!"
+	guibutton	"Bases..."			"showgui bases0"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui bases0 [
+	guitext		"Category Statements - Bases"
+	guitext		"Teamchat OFF"
+		guibar
+	guislider 	"baseslider" 1 10
+	guibutton	"Captured Base"			"say Base $baseslider captured!"
+	guibutton	"Lost Base"			"say Base $baseslider lost!"
+	guibutton	"Enemy Captured Base"		"say Enemy captured Base $baseslider !"
+	guibutton	"Enemy Lost Base"		"say Enemy lost Base $baseslider !"
+		guibar
+	guibutton	"Back"				"cleargui; showgui statements0"
+]
+
+
+newgui statements1 [
+	guitext 	"Category Statements"
+	guitext		"Teamchat ON"
+		guibar
+	guibutton 	"Attacking"			"say #sayteam I'm attacking!"
+	guibutton 	"Defending"			"say #sayteam I'm defending!"
+	guibutton	"Path Cleared"			"say #sayteam Path Cleared!"
+		guibar
+	guibutton	"Enemy Weak"			"say #sayteam The Enemy is weakened!"
+	guibutton	"Bases..."			"showgui bases1"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui bases1 [
+	guitext		"Category Statements - Bases"
+	guitext		"Teamchat ON"
+		guibar
+	guislider 	"baseslider" 1 10
+	guibutton	"Captured Base"			"say #sayteam Base $baseslider captured!"
+	guibutton	"Lost Base"			"say #sayteam Base $baseslider lost!"
+	guibutton	"Enemy Captured Base"		"say #sayteam Enemy captured Base $baseslider!"
+	guibutton	"Enemy Lost Base"		"say #sayteam Enemy lost Base $baseslider!"
+		guibar
+	guibutton	"Back"				"cleargui; showgui statements1"
+]
+
+newgui requests0 [
+	guitext		"Category Requests"
+	guitext		"Teamchat OFF"
+		guibar
+	guibutton	"Need Ammo"			"say I need ammo!"
+	guibutton	"Spezific Ammo..."		"showgui spezificammo0"
+	guibutton	"Need Help"			"say Help me capturing!"
+	guibutton	"Hold Fire"			"say Hold Your Fire!"
+	guibutton	"Kill Reds"			"say Kill the red players, not the blue ones!"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui spezificammo0 [
+	guitext		"Category Requests - Spezific Ammo"
+	guitext		"Teamchat OFF"
+		guibar
+	guibutton	"Need Cartridges"		"say I need cartridges!"
+	guibutton	"Need Bullets"			"say I need bullets!"
+	guibutton	"Need Shells"			"say I need shells!"
+	guibutton	"Need Riflerounds"		"say I need riflerounds!"
+	guibutton	"Need Rockets"			"say I need rockets!"
+	guibutton	"Need Grenades"			"say I need grenades!"
+		guibar
+	guibutton	"Back"				"cleargui; showgui requests0"
+]
+
+newgui requests1 [
+	guitext		"Category Requests"
+	guitext		"Teamchat ON"
+		guibar
+	guibutton	"Need Ammo"			"say #sayteam I need ammo!"
+	guibutton	"Spezific Ammo..."		"showgui spezificammo1"
+	guibutton	"Need Help"			"say #sayteam Help me capturing!"
+	guibutton	"Hold Fire"			"say #sayteam Hold Your Fire!"
+	guibutton	"Kill Reds"			"say #sayteam Kill the red players, not the blue ones!"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui spezificammo1 [
+	guitext		"Category Requests - Spezific Ammo"
+	guitext		"Teamchat ON"
+		guibar
+	guibutton	"Need Cartridges"		"say #sayteam I need cartridges!"
+	guibutton	"Need Bullets"			"say #sayteam I need bullets!"
+	guibutton	"Need Shells"			"say #sayteam I need shells!"
+	guibutton	"Need Riflerounds"		"say #sayteam I need riflerounds!"
+	guibutton	"Need Rockets"			"say #sayteam I need rockets!"
+	guibutton	"Need Grenades"			"say #sayteam I need grenades!"
+		guibar
+	guibutton	"Back"				"cleargui; showgui requests1"
+]
+
+newgui commands0 [
+	guitext		"Category Commands"
+	guitext		"Teamchat OFF"
+		guibar
+	guibutton	"Follow Me"			"say Follow Me!
+	guibutton	"Let's Go"			"say Let's Go!"
+	guibutton	"Move"				"say Move!"
+	guibutton	"Clear Path"			"say Clear the Path!"
+		guibar
+	guibutton	"Attack Bases"			"say Attack the Bases!"
+	guibutton	"Defend Bases"			"say Defend the Bases!"
+	guibutton	"Attack/Defend Bases..."	"showgui adbases0"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui adbases0 [
+	guitext		"Category Commands - Attack/Defend Bases"
+	guitext		"Teamchat OFF"
+		guibar
+	guislider 	"baseslider" 1 10
+	guibutton	"Attack Base"			"say Attack Base $baseslider !"
+	guibutton	"Defend Base"			"say Defend Base $baseslider !"
+		guibar
+	guibutton	"Back"				"cleargui; showgui commands0"
+]
+
+newgui commands1 [
+	guitext		"Category Commands"
+	guitext		"Teamchat ON"
+		guibar
+	guibutton	"Follow Me"			"say #sayteam Follow Me!"
+	guibutton	"Let's Go"			"say #sayteam Let's Go!"
+	guibutton	"Move"				"say #sayteam Move!"
+	guibutton	"Clear Path"			"say #sayteam Clear the Path!"
+		guibar
+	guibutton	"Attack Bases"			"say #sayteam Attack the Bases!"
+	guibutton	"Defend Bases"			"say #sayteam Defend the Bases!"
+	guibutton	"Attack/Defend Bases..."	"showgui adbases1"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui adbases1 [
+	guitext		"Category Commands - Attack/Defend Bases"
+	guitext		"Teamchat ON"
+		guibar
+	guislider 	"baseslider" 1 10
+	guibutton	"Attack Base"			"say #sayteam Attack Base $baseslider !"
+	guibutton	"Defend Base"			"say #sayteam Defend Base $baseslider !"
+		guibar
+	guibutton	"Back"				"cleargui; showgui commands1"
+]
+
+
+newgui talk0 [
+	guitext		"Category Talk"
+	guitext		"Teamchat OFF"
+		guibar
+	guibutton	"Yes"				"say Yes!"
+	guibutton	"No"				"say No!"
+		guibar
+	guibutton	"Thanks"			"say Thank you!"
+	guibutton	"Sorry"				"say Sorry!"
+	guibutton	"Oops"				"say Oops!"
+	guibutton	"Welcome"			"say No Problem."
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]	
+
+newgui talk1 [
+	guitext		"Category Talk"
+	guitext		"Teamchat ON"
+		guibar
+	guibutton	"Yes"				"say #sayteam Yes!"
+	guibutton	"No"				"say #sayteam No!"
+		guibar
+	guibutton	"Thanks"			"say #sayteam Thank you!"
+	guibutton	"Sorry"				"say #sayteam Sorry!"
+	guibutton	"Oops"				"say #sayteam Oops!"
+	guibutton	"Welcome"			"say #sayteam No Problem."
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]
+
+newgui global [
+	guitext		"Category Global"
+		guibar
+	guibutton	"Hi"				"say Hello!"
+	guibutton	"Bye"				"say Good Bye!"
+	guibutton	"Great Shot"			"say Great Shot!"
+	guibutton	"Good Game"			"say Good Game!"
+	guibutton	"Team Balance"			"say Balance the Teams, please."
+	guibutton	"Wall Capturing"		"say Don't capture through walls, noob!"
+		guibar
+	guibutton	"Back"				"cleargui; showgui quickchat"
+]	

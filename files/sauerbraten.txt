@@ -1,0 +1,9 @@
+/newent jumppad (power) example /newent jumppad 10                   if you step on this you will jump as high as the power of the jumppad is 
+/newent teleport (teleprt number) example /newent teleport 1         makes a teleport without a destination
+/newent teledest (number) example /newent teledest 1                 this makes a destination for the teleports
+/newent particles (number) example /newent particles 2               this makes either shiny lights or other things
+/screenshot                                                          this makes a screenshot in your sauerbraren folder
+/newent base                                                         makes a base for capture
+/map (map name) example /map neonpanic                               loads a map from your packages/base folder
+/savemap (map name) example /savemap level9                          saves a map into your packages/base folder
+/newent light (number of power) (color) (color) (color) example /newent light 10 100 20 20         makes a light
