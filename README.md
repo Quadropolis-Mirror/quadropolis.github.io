@@ -1,2 +1,2 @@
-# quadropolis.github.io
-This repository gathers almost all the content of the Quadropolis.us community
+## *better safe than sorry*
+#### The purpose of this mirror is to preserve the old content from the Quadropolis.us community in different hosters, thus decreasing the chances of losing them for some reason.
