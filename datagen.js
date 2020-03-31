@@ -34,7 +34,8 @@ writeHtml('<span style="color: white">/</span> <a href="allnodes2.json" download
 				};
 
 				if (post[p].image) {
-					writeHtml ('<img src="' + post[p].image + '" loading="lazy"/>');
+					imagename = post[p].image.substr(22);
+					writeHtml ('<img src="' + imagename + '" loading="lazy"/>');
 				};
 				writeHtml('<p class="post">' + post[p].content.replace(/\n/g, "<br>") + "</p>")
 				writeHtml('<span style="color: #ff9800">Files:</span>')
