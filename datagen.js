@@ -22,7 +22,7 @@ writeHtml('<span style="color: white">/</span> <a href="allnodes2.json" download
 			if (post[p]) {
 				writeHtml('<div class="content">');
 				if (post[p].title) {
-					writeHtml("<h2><span class='counter'>(" + post[p].id + ")</span><a id='" + post[p].id + "' target='_blank' href='quadropolis.us/nodes/" + post[p].id + "'>" + post[p].title + "</a></h2>");
+					writeHtml("<h2><span class='counter'>(" + post[p].id + ")</span><a id='" + post[p].id + "' target='_blank' href='http://quadropolis.us/node/" + post[p].id + "'>" + post[p].title + "</a></h2>");
 				} else {
 					writeHtml("<h2><span class='counter'>(" + post[p].id + ")</span> Untitled Post</h2>")
 				};
