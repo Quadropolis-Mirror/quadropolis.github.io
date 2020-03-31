@@ -1,0 +1,24 @@
+// Stairs-o-matic, by Denilson (CrazyTerabyte) {{{
+alias stairshelp [
+	echo [Use: /stairsx step inc]
+	echo ["step" is the size (width) of each step, and "inc" is the height of each step.]
+	echo [Use "/stairsx" for stairs on "x" axis, and "/stairsy" for stairs on "y" axis.]
+]
+alias stairsx [
+	alias stairs_var $selx
+	loop (div $selxs $arg1) [
+		select (+ $stairs_var (* $i $arg1)) $sely $arg1 $selys
+// Next line will do a nice effect.
+//		select (+ $stairs_var (* $i $arg1)) $sely 1 $selys
+		editheight $flrceil (* $arg2 (+ $i 1))
+	]
+]
+alias stairsy [
+	alias stairs_var $sely
+	loop (div $selys $arg1) [
+		select $selx (+ $stairs_var (* $i $arg1)) $selxs $arg1
+		editheight $flrceil (* $arg2 (+ $i 1))
+	]
+]
+// }}}
+

@@ -1,0 +1,44 @@
+
+//Easy reload and save map by Denilson (CrazyTB) {{{
+
+//There is no detection of map changes. User should take care when using these commands.
+//Instructions:
+// - Use /setfilename "some/file" to set the filename of current map.
+// - Press F2 to save it, or F3 to (re)load it.
+// - Press F4 to save and send it (doing a sendmap).
+// - To avoid accidental loses when loading another map or accidental saves,
+// the F2, F3 and F4 keys will show the command prompt, so you need to check if
+// filename is correct and press Enter.
+
+bind F2 ezsave
+bind F3 ezreload
+bind F4 ezsendmap
+
+alias map_filename ""
+alias setfilename [  // {{{
+	concat "Previous filename was" $map_filename
+	echo $s
+	alias map_filename $arg1
+	concat "Current map filename is" $map_filename
+	echo $s
+]  // }}}
+alias ezsave [  // {{{
+	if (strcmp $map_filename "") [ echo "No filename set. Please use /setfilename" ] [
+		concat "/savemap" $map_filename
+		saycommand $s
+	]
+]  // }}}
+alias ezreload [  // {{{
+	if (strcmp $map_filename "") [ echo "No filename set. Please use /setfilename" ] [
+		concat "/map" $map_filename
+		saycommand $s
+	]
+]  // }}}
+alias ezsendmap [  // {{{
+	if (strcmp $map_filename "") [ echo "No filename set. Please use /setfilename" ] [
+		concat "/sendmap" $map_filename
+		saycommand $s
+	]
+]  // }}}
+// }}}
+

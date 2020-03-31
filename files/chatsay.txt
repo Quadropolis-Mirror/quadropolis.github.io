@@ -1,0 +1,6 @@
+bind LSHIFT "chatsay"
+
+alias "chatsay" "num1"
+alias "num1" [ say "BOOM! HEADSHOT!!"; alias "chatsay" "num2" ]
+alias "num2"  [ say "OMG n00b U GOT OWNED!"; alias "chatsay" "num3" ]
+alias "num3"  [ say "OWNED!!"; alias "chatsay" "num1" ]

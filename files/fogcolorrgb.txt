@@ -1,0 +1,9 @@
+
+//Fog Color RGB by Denilson (CrazyTB)
+alias fogcolor fogcolour $arg1
+alias fogcolorrgb fogcolourrgb $arg1 $arg2 $arg3
+alias fogcolorgetrgb fogcolourgetrgb
+alias fogcolourgetrgb [ concat (div $fogcolour 65536) (mod (div $fogcolour 256) 256) (mod $fogcolour 256); echo $s ]
+alias fogcolourrgb [ fogcolour (+ (+ (* 65536 $arg1) (* 256 $arg2)) $arg3 ) ]
+
+

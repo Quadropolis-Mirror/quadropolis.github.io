@@ -1,0 +1,22 @@
+\\AcieeedZOOM
+\\one click In ... one click Out
+
+
+
+
+fov 110
+
+crosshairsize 22
+
+sensitivity 40
+
+
+
+
+//fov zoom
+
+bind MOUSE2 "zoom" //bind any key you want
+
+alias "zoom" "out"
+alias "out" [ fov 110; crosshairsize 22; sensitivity 40; echo zoomOut; alias "zoom" "in" ]
+alias "in"  [ fov  15; crosshairsize 50; sensitivity 10; echo zoomIn; alias "zoom" "out" ]

@@ -1,0 +1,13 @@
+replace your MOUSE2 bind (or whatever key you prefer) with this to enable a simple zoom.
+
+bind "MOUSE2" [fov 25; hudgun 0; maxroll 8; crosshairsize 50; echo "Zoom x4"; onrelease [fov 110; hudgun 1; maxroll 3; crosshairsize 10]]
+
+Note: I'm doing this all from memory; I figured it out yesterday on my home computer, so tell me if
+it doesn't work right. I'm not sure I got the default crosshairsize variable right, so check that 
+before you add this script. Also, I just added the echo part today. I'm not sure if it will work, so
+you can delete it if it doesn't.
+
+Another Note: I have tried to make this zoom feature very balanced. Notice when you go into zoom
+you roll is a LOT heavier when you strafe, making it where you almost HAVE TO stand still to make
+a hit. This zoom feature was mostly designed for use with the rifle, and has proven to be VERY
+effective (not to mention freaking cool!).

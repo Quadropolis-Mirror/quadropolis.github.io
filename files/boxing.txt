@@ -1,0 +1,1 @@
+bind mouse2 [weapon 0;sensitivity 46;fov 120;attack;onrelease [weapon 1 2 4;sensitivity 23;fov 110]]

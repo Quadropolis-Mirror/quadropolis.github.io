@@ -1,0 +1,1 @@
+bind "TAB" [gamespeed 10; hudgun 1; hidehud 1; onrelease [gamespeed 100; hudgun 1; hidehud 0]]

@@ -1,0 +1,2 @@
+bind MOUSE2 [fov 50; sensitivity 2; hudgun 0; onrelease [fov 105; sensitivity 3; hudgun 1]]
+bind MOUSE1 [attack; crosshairsize 20; onrelease [crosshairsize 15]]

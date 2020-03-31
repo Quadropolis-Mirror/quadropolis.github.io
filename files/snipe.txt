@@ -1,0 +1,3 @@
+bind "SPACE" [domodifier 1; hudgun 0; maxroll 8; crosshairsize 50; onrelease [fov 100; hudgun 1; maxroll 0; crosshairsize 10]]
+
+Modify this as needed to suit your needs.
