@@ -34,7 +34,11 @@ writeHtml('<span style="color: white">/</span> <a href="allnodes2.json" download
 				};
 
 				if (post[p].image) {
-					imagename = post[p].image.substr(22);
+					if (post[p].image.includes("quadropolis.us/files/")) {
+						imagename = post[p].image.substr(22).replace(/%20/g, "-");
+					} else {
+						imagename = post[p].image
+					};
 					writeHtml ('<img src="' + imagename + '" loading="lazy"/>');
 				};
 				writeHtml('<p class="post">' + post[p].content.replace(/\n/g, "<br>") + "</p>")
