@@ -1,0 +1,10 @@
+autosave = 0
+//time between saves in minutes
+saveinterval = 5
+
+//the filename used when autosaving
+autosavemapname = "autosave"
+
+dosave = [if $autosave [ savemap $autosavemapname;sleep (* $saveinterval 60000) [dosave] ] ]
+
+toggleAutosave = [ if $autosave [ echo "Disabling autosave";autosave = 0 ][ echo "Enabling autosave";autosave = 1;dosave ] ]
