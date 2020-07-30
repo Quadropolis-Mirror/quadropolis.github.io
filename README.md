@@ -13,7 +13,7 @@
 - 28 .cgz
 - 25 .gif
 - 20 .txt
-- 6 unknown
+- 6 .exe (not available on github, [download here](https://drive.google.com/drive/folders/1Y8pzIXrTXYRdkfHEusyBN3y3ZMu9Q4xm?usp=sharing))
 - 5 app
 - 4 .ico
 - 2 .bak
